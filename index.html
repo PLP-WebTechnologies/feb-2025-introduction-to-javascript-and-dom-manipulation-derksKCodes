@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Advanced HTML5 Elements</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-change">
+            <button id="nav-change" onclick="changePageColor()"> Click to change CSS Style </button>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#media">Multimedia</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1 id="heading">Welcome to Advanced HTML5 Elements</h1>
+
+        </header>
+        <div class="change">
+            <button onclick="changeContent()" class="changeStyle"> Change Heading Content
+            </button>
+        </div>
+
+        <section id="topics">
+            <h2>Topics Covered</h2>
+            <ol id="listItems" type="I">
+                <li>Introduction to HTML5</li>
+                <li>Working with Forms and Validation</li>
+                <li>Using Tables for Data Representation</li>
+                <li>Embedding Multimedia (Audio & Video)</li>
+                <li>Exploring Advanced Input Types</li>
+            </ol>
+            <button onclick="AddItem()">Add Item </button>
+            <button onclick="removeItem()">Remove Item</button>
+        </section>
+
+        <section>
+            <h2>Featured Image</h2>
+            <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="Technology workspace"
+                width="600">
+        </section>
+
+        <section>
+            <h2> Contact List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Name">Brian Omondi</td>
+                        <td data-label="Address">Westlands, Nairobi</td>
+                        <td data-label="Mobile">+254 712 345 678</td>
+                        <td data-label="Email">brian.omondi@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">Faith Wanjiru</td>
+                        <td data-label="Address">Thika Road, Nairobi</td>
+                        <td data-label="Mobile">+254 798 654 321</td>
+                        <td data-label="Email">faith.wanjiru@yahoo.com</td>
+                    </tr>
+                    <tr>
+                        <td>Brian Omondi</td>
+                        <td>Westlands, Nairobi</td>
+                        <td>+254 712 345 678</td>
+                        <td>brian.omondi@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Faith Wanjiru</td>
+                        <td>Thika Road, Nairobi</td>
+                        <td>+254 798 654 321</td>
+                        <td>faith.wanjiru@yahoo.com</td>
+                    </tr>
+                    <tr>
+                        <td>Kevin Mutua</td>
+                        <td>Nyali, Mombasa</td>
+                        <td>+254 723 678 910</td>
+                        <td>kevin.mutua@outlook.com</td>
+                    </tr>
+                    <tr>
+                        <td>Mercy Achieng</td>
+                        <td>Kisumu CBD</td>
+                        <td>+254 732 654 098</td>
+                        <td>mercy.achieng@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Samuel Kiptoo</td>
+                        <td>Eldoret Town</td>
+                        <td>+254 701 888 999</td>
+                        <td>samuel.kiptoo@icloud.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="register">
+            <h2>Registration Form</h2>
+            <form action="#" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required
+                    minlength="6">
+
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+
+                <fieldset>
+                    <legend>Gender</legend>
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                </fieldset>
+
+
+                <label for="course">Select Course:</label>
+                <select id="course" name="course" required>
+                    <option value="" disabled selected>Choose a course</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                    <option value="mysql">MySQL</option>
+                    <option value="python">Python</option>
+                </select>
+
+
+                <fieldset>
+                    <legend>Interests</legend>
+                    <label><input type="checkbox" name="interest" value="coding"> Coding</label>
+                    <label><input type="checkbox" name="interest" value="design"> Design</label>
+                    <label><input type="checkbox" name="interest" value="gaming"> Gaming</label>
+                </fieldset>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section id="media">
+            <h2>Multimedia Section</h2>
+
+            <h3>Listen to This Audio</h3>
+            <audio controls>
+                <source src="media/Admiral Tibet - Informer (Lyrics Video)(M4A_128K).m4a" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>Watch This Video</h3>
+            <video controls width="600">
+                <source src="media/Untitled design.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

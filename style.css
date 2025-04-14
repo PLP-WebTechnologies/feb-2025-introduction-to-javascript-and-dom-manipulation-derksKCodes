@@ -1,0 +1,278 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    /* Enable Flexbox for the body */
+    flex-direction: column;
+    /* Stack items vertically by default */
+    align-items: center;
+    /* Center items horizontally */
+}
+
+.container {
+    width: 90%;
+    /* Use a percentage for responsiveness */
+    max-width: 1200px;
+    /* Limit maximum width */
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    /* Add margin below the container */
+    display: flex;
+    /* Enable Flexbox for the container */
+    flex-direction: column;
+    /* Stack items vertically within the container */
+}
+
+header {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* Enable Flexbox for the navbar ul */
+    justify-content: center;
+    /* Center navigation items horizontally */
+    background-color: #333;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    /* Allow wrapping to multiple lines on small screens */
+}
+
+.navbar li {
+    margin: 0;
+    /* Remove default margins from list items */
+    display: flex;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    /* Center link text */
+}
+
+.navbar li a:hover {
+    background-color: #555;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+ol {
+    list-style-type: upper-roman;
+    padding-left: 20px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    border: 5px solid #007bff;
+    border-radius: 10px;
+}
+
+table {
+    height: auto;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    /* Enable Flexbox for the form */
+    flex-direction: column;
+    /* Stack form elements vertically */
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: calc(100% - 20px);
+    /* Adjust width to account for padding and border */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+.changeStyle {
+
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.nav-change,
+.change {
+    text-align: center;
+    padding: 10px;
+    margin-top: 1px;
+}
+
+#nav-change {
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: flex-start;
+    /* Align button to the start of the form container */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+fieldset {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+legend {
+    padding: 5px;
+}
+
+video {
+    display: block;
+    max-width: 50%;
+    height: auto;
+
+    border-radius: 5px;
+}
+
+/* Responsive adjustments using media queries */
+
+@media screen and (max-width: 768px) {
+
+    /* For tablets and smaller screens, stack navbar items */
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        width: 100%;
+        /* Make navbar items take full width */
+        text-align: center;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+
+    }
+
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        width: 100%;
+    }
+
+    td {
+        text-align: left;
+
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* For very small screens (phones), further adjust form inputs */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select {
+        width: 100%;
+        /* Make form inputs take full width */
+    }
+
+    form {
+        padding: 10px;
+    }
+
+}
