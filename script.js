@@ -26,7 +26,15 @@ function changePageColor() {
   }
 }
 
-
+isChange = true;
 function changeContent(){
-    document.getElementById("heading").textContent = "Javascript DOM manipulation"; 
+    
+    if(isChange){
+        document.getElementById("heading").textContent = "Javascript DOM manipulation";
+        isChange = false;        
+    }
+    else{
+        document.getElementById("heading").textContent = "Welcome to Advanced HTML5 Elements";
+        isChange = true;
+    }
 }
